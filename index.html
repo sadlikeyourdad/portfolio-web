@@ -1,84 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Samuel Bujnák | Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <title>Samuel Bujňák - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css">
+    <script src="js/main.js"></script>
 </head>
+
 <body>
+    <nav>
+        <!-- We'll have the logo and navigation links here -->
+        <div class="nav-content container">
+            <div class="logo">
+                <a href="#">Samuel Bujňák</a>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#education">Education</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-<div class="overlay"></div>
-
-<header>
-    <h1>SAMUEL BUJŇÁK</h1>
-    <div class="intro">
-        <p>Junior Malware Researcher | ESET</p>
-        <p>Slovakia</p>
-    </div>
-</header>
-
-<nav id="mainNav">
-    <ul>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#education">Education</a></li>
-    </ul>
-</nav>
-
-<main>
-    <!-- Add sections for experience, skills, education, etc. -->
-    <section id="about" data-aos="fade-up">
-        <h2>About Me</h2>
-        <p>Curiosity driven young software and little bit
-        hardware reverser ... (rest of the text) ... teamwork is not a problem for me.</p>
+    <section id="about">
+        <div class="container">
+            <div class="profile-photo">
+                <img src="assets/images/profile.jpg" alt="Samuel Bujňák" id="profileImg">
+            </div>
+            <div class="bio">
+                <!-- Introduction & About Content -->
+                <h1>About Me</h1>
+                <p>
+                    Curiosity driven young software and a little bit of hardware reverser with experience in various areas
+                    of computer systems. ...
+                </p>
+            </div>
+        </div>
     </section>
 
-    <section id="experience" data-aos="fade-left">
-        <h2>Experience</h2>
-        <h3>Junior Malware Researcher - ESET, Bratislava</h3>
-        <p>NOVEMBER 2022 – PRESENT</p>
-        <p>Analysis of Linux and Windows malicious executables.</p>
-        
-        <!-- Additional experiences can be added similarly -->
+    <section id="experience">
+        <div class="container">
+            <h1>Experience</h1>
+            <div>
+                <!-- Experience Content -->
+                ...
+            </div>
+        </div>
     </section>
 
-    <section id="skills" data-aos="fade-right">
-        <h2>Computer Skills</h2>
-        <ul>
-            <li>Languages – C/C++, Assembly (x86, x86_64)</li>
-            
-            <!-- Add all skills similarly -->
-        </ul>
+    <section id="skills">
+        <div class="container">
+            <h1>Computer Skills</h1>
+            <!-- Skills Content -->
+            ...
+        </div>
     </section>
 
-    <section id="education" data-aos="fade-left">
-        <h2>Education</h2>
-            <li> 2018 – 2022: SPŠE Prešov - Electrical engineering with a focus on computer systems</li>
-        <!-- Add education details similarly -->
+    <section id="education">
+        <div class="container">
+            <h1>Education</h1>
+            <!-- Education Content -->
+            ...
+        </div>
     </section>
 
-    <section id="activities" data-aos="fade-up">
-        <h2>Activities</h2>
-        
-        <!-- Add activities details similarly -->
-    </section>
+    <footer>
+        <div class="container">
+            <!-- Footer Content -->
+            <p>&copy; 2023 Samuel Bujňák. All rights reserved.</p>
+        </div>
+    </footer>
 
-    <section id="competitions" data-aos="fade-right">
-        <h2>Competition Experience</h2>
-        ...
-        <!-- Add competition details similarly -->
-    </section>
-</main>
-
-<footer>
-    <p>Copyright © 2023 Samuel Bujnák. All Rights Reserved.</p>
-</footer>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-<script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
-</html>
 
+</html>
