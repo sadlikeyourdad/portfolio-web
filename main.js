@@ -1,17 +1,17 @@
 document.addEventListener("DOMContentLoaded", function() {
     AOS.init();
     
-    const nav = document.querySelector("nav");
-    let scrolled = false;
+    let mainNav = document.getElementById('mainNav');
 
     window.onscroll = function() {
-        if (window.pageYOffset > 100) {
-            nav.classList.add('scrolled');
-            scrolled = true;
+        // If we've scrolled 50px or more, add the "scrolled" class to the nav
+        if (window.scrollY > 50) {
+            mainNav.classList.add('scrolled');
         } else {
-            nav.classList.remove('scrolled');
-            scrolled = false;
+            mainNav.classList.remove('scrolled');
         }
     };
+});
+
 });
 
