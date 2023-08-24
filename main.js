@@ -1,17 +1,22 @@
-document.addEventListener("DOMContentLoaded", function() {
-    AOS.init();
+document.addEventListener('DOMContentLoaded', function() {
+    // Cache selectors
+    let lastScrollTop = 0;
+    const nav = document.querySelector('nav');
     
-    let mainNav = document.getElementById('mainNav');
-
-    window.onscroll = function() {
-        // If we've scrolled 50px or more, add the "scrolled" class to the nav
-        if (window.scrollY > 50) {
-            mainNav.classList.add('scrolled');
+    // Check for scroll event
+    window.addEventListener('scroll', function() {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (scrollTop > lastScrollTop) {
+            // On scroll down, we'll shrink the nav
+            nav.classList.add('nav-shrink');
         } else {
-            mainNav.classList.remove('scrolled');
+            // On scroll up, we'll expand the nav
+            nav.classList.remove('nav-shrink');
         }
-    };
+        
+        lastScrollTop = scrollTop;
+    });
 });
 
-});
 
