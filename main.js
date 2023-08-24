@@ -1,22 +1,28 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Cache selectors
-    let lastScrollTop = 0;
-    const nav = document.querySelector('nav');
-    
-    // Check for scroll event
-    window.addEventListener('scroll', function() {
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        
-        if (scrollTop > lastScrollTop) {
-            // On scroll down, we'll shrink the nav
-            nav.classList.add('nav-shrink');
+document.addEventListener("DOMContentLoaded", function() {
+    // Initialising AOS library
+    AOS.init();
+
+    const navbar = document.getElementById('navbar');
+    let scrolled = false;
+
+    window.onscroll = function() {
+        if (window.pageYOffset > 100) {
+            navbar.classList.add('scrolled');
+            if (!scrolled) {
+                navbar.style.transform = 'translateY(-70px)';
+            }
+            setTimeout(function() {
+                navbar.style.transform = 'translateY(0)';
+                scrolled = true;
+            }, 200);
         } else {
-            // On scroll up, we'll expand the nav
-            nav.classList.remove('nav-shrink');
+            navbar.classList.remove('scrolled');
+            scrolled = false;
         }
-        
-        lastScrollTop = scrollTop;
-    });
+    }
 });
+
+// If you have any other JS functions or interactions you'd like to add, you can include them below
+
 
 
