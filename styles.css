@@ -1,123 +1,84 @@
-/* Global Styles */
+/* Base Styles */
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
 }
 
 .container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-/* Navigation Styles */
-nav {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-nav .nav-content {
+/* Navbar Styles */
+#navbar {
+    background: transparent;
+    height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: transform 0.5s ease, background 0.5s ease;
 }
 
-nav .logo a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.5rem;
+#navbar.scrolled {
+    background: #333; /* Adjust to your preferred color */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
-nav .nav-links ul {
-    list-style-type: none;
-    padding: 0;
+#navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff; 
 }
 
-nav .nav-links ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav .nav-links ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-nav .nav-links ul li a:hover {
-    background-color: #555;
-}
-
-/* On Scroll Nav Behavior */
-nav.nav-shrink {
-    padding: 0.5rem 0;
-}
-
-/* About Section with Profile Photo */
-#about {
+#navbar .menu {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2rem 0;
+    gap: 20px; /* Spacing between menu items */
 }
 
-#about .profile-photo {
-    flex-basis: 40%;
+#navbar .menu a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
 }
 
-#about .profile-photo img {
-    max-width: 100%;
+#navbar .menu a:hover {
+    color: #ddd;
+}
+
+/* Profile Photo Styles */
+.profile-photo {
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-#about .bio {
-    flex-basis: 55%;
+/* AOS Animations */
+[data-aos] {
+    opacity: 0;
+    transition-property: transform, opacity;
 }
 
-/* Footer */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-    margin-top: 2rem;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    nav .nav-content {
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    #navbar {
         flex-direction: column;
+        align-items: flex-start;
     }
 
-    nav .logo {
-        margin-bottom: 1rem;
+    #navbar .menu {
+        display: block;
     }
 
-    nav .nav-links ul {
-        text-align: center;
-        padding-top: 1rem;
-    }
-
-    #about {
-        flex-direction: column-reverse;
-    }
-
-    #about .profile-photo, #about .bio {
-        flex-basis: 100%;
-        text-align: center;
-    }
-
-    #about .bio {
-        margin-top: 2rem;
+    .profile-photo {
+        width: 100px;
+        height: 100px;
     }
 }
+
+/* Other styles based on your specific needs can be added below */
