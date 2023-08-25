@@ -3,30 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Samuel Bujnák | Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <link rel="stylesheet" href="styles.css">
+    <title>Samuel Bujňák - Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/aos.css">
 </head>
 <body>
-
-<div class="container">
-    <img src="samuel.webp" alt="Samuel Bujnák" data-aos="fade-in">
-    <header data-aos="slide-right">
+    <header data-aos="fade-down">
         <h1>SAMUEL BUJŇÁK</h1>
-        <p>Bratislava, Slovakia<br>samuelbujnak@proton.me</p>
-        <button id="darkModeToggle">Toggle Dark Mode</button>
+        <address>
+            Lipany, Slovakia | <a href="tel:+421949370">+421 949 370</a> | <a href="mailto:samuelbujnak@proton.me">samuelbujnak@proton.me</a>
+        </address>
     </header>
-
-    <main>
-        <section data-aos="fade-up">
-            <h2>About Me</h2>
-            <p>Curiosity driven young software ... teamwork is not a problem for me.</p>
-        </section>
-        <!-- Additional sections like experience, skills, education go here -->
-    </main>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-<script src="main.js"></script>
+    <section data-aos="fade-up">
+        <p>
+            Curiosity driven young software and little bit hardware reverser...
+            <a href="#more" id="readMoreBtn">Read More</a>
+        </p>
+    </section>
+    <section data-aos="fade-left" id="experience">
+        <h2>Experience</h2>
+        <!-- Experience details -->
+    </section>
+    <section data-aos="fade-right" id="skills">
+        <h2>Computer Skills</h2>
+        <!-- Skills details -->
+    </section>
+    <!-- Other sections... -->
+    <footer data-aos="zoom-in">
+        <p>In my spare time, among other things...</p>
+    </footer>
+    <script src="js/aos.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
