@@ -1,3 +1,10 @@
-AOS.init();
+// Typing animation for the name
+const text = 'Samuel Bujňák';
+let index = 0;
 
-// Implement any interactive features like a "read more" button, modals, etc.
+setInterval(() => {
+    if (index < text.length) {
+        document.querySelector('.typing').textContent += text.charAt(index);
+        index++;
+    }
+}, 150);  // Adjust speed as needed
