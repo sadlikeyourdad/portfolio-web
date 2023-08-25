@@ -1,0 +1,76 @@
+/* Reset and base styles */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+#main-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+}
+
+.nav-logo {
+    padding-left: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#main-nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+#main-nav a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+#main-nav a:hover {
+    color: #ddd;
+}
+
+.banner {
+    background-color: #444;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.services {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    width: calc(33.333% - 20px); /* Three items per row minus gap */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.service-item img {
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Responsive styling can be added for smaller screens */
