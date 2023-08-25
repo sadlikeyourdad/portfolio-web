@@ -5,27 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Samuel Bujňák - Ethical Hacker</title>
     <link rel="stylesheet" href="css/styles.css">
-	<style>
-    body {
-        color: #00FF41;
-        background-color: black;
-        font-family: 'Courier New', Courier, monospace;
-    }
 
-    canvas {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-    }
-</style>
+    <!-- AOS CSS Link -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css">
 
 </head>
 <body>
 <canvas id="matrixCanvas"></canvas>
 
-<div class="typing">
-    Samuel Bujňák
+<div class="typing" id="name">
+    <!-- Name will be typed here by the script -->
 </div>
 
 <section class="introduction">
@@ -57,6 +46,8 @@
     <!-- Content here -->
 </section>
 
+<!-- AOS JS Script -->
+<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>
